@@ -54,7 +54,7 @@ const Jobs = (props) => {
           }}>
           JOBS FOR {selectedLanguage.toUpperCase()}
         </Text>
-        <FlatList data={data} renderItem={renderJobs} />
+        <FlatList keyExtractor={(item,index) => index.toString()} data={data} renderItem={renderJobs} />
 
         <TouchableOpacity
           style={{
